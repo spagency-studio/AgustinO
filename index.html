@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agustino · Asesor de parcelas y terrenos en Chile</title>
+<meta name="description" content="Agustino, martillero público y corredor inmobiliario. Te asesoro en la compra de parcelas y terrenos en Chile para que entiendas lo que compras.">
+<meta name="theme-color" content="#F4F1E6">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CL">
+<meta property="og:title" content="Agustino · Asesor de parcelas y terrenos en Chile">
+<meta property="og:description" content="Antes de comprar, entiende lo que compras. Te acompaño a elegir bien, no rápido.">
+<!-- Reemplazar por el retrato (img/agustino-og.jpg, 1200×630) cuando esté disponible.
+     Las URL absolutas asumen GitHub Pages; cambiarlas si se usa un dominio propio. -->
+<link rel="canonical" href="https://spagency-studio.github.io/agustino/">
+<meta property="og:url" content="https://spagency-studio.github.io/agustino/">
+<meta property="og:image" content="https://spagency-studio.github.io/agustino/img/og-campo.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Viñedo y cerros al atardecer en el campo chileno">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="brand/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Josefin+Sans:wght@400;600&display=swap">
+
+<style>
+:root{
+  --crema:#F4F1E6;
+  --pergamino:#E9DFC9;
+  --carbon:#3A3A35;
+  --oliva:#77793A;
+  --oliva-osc:#5E6030;
+  --bosque:#2E3B2A;
+  --tierra:#8A5A3B;
+
+  --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans:"Josefin Sans", "Helvetica Neue", Arial, sans-serif;
+
+  --gutter:20px;
+  --max:1240px;
+  --line:1px solid var(--oliva);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;color-scheme:light;scroll-padding-bottom:80px}
+a,button{touch-action:manipulation;-webkit-tap-highlight-color:rgba(94,96,48,.15)}
+body{
+  margin:0;background:var(--crema);color:var(--carbon);
+  font-family:var(--sans);font-size:1rem;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--oliva-osc);outline-offset:3px}
+.bosque :focus-visible{outline-color:var(--crema)}
+
+.skip{position:absolute;left:var(--gutter);top:-100px;background:var(--carbon);color:var(--crema);padding:.6rem 1rem;z-index:20;font-size:.875rem}
+.skip:focus{top:12px}
+
+.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+
+/* Etiquetas: Josefin, mayúsculas, tracking +12 % */
+.label{
+  font-family:var(--sans);font-weight:600;font-size:.75rem;
+  letter-spacing:.12em;text-transform:uppercase;line-height:1.4;
+}
+.rule{display:block;height:0;border:0;border-top:var(--line);margin:0}
+
+/* ---------- 1. Hero ---------- */
+.hero{padding-top:28px;padding-bottom:56px}
+.hero__grid{display:grid;gap:32px}
+.hero__logo{width:200px;margin-left:-4px}
+.hero__text{display:flex;flex-direction:column;gap:20px}
+.eyebrow{color:var(--oliva-osc);display:flex;align-items:center;gap:14px;margin:0}
+.eyebrow::before{content:"";width:28px;border-top:var(--line);flex:none}
+h1{
+  font-family:var(--serif);font-weight:500;
+  font-size:clamp(2.6rem, 8.2vw + .4rem, 4.75rem);
+  line-height:1.02;letter-spacing:-.01em;margin:0;
+  text-wrap:balance;
+}
+.lede{font-size:1.0625rem;line-height:1.55;margin:0;max-width:30ch}
+.lede strong{font-weight:600}
+
+.btn{
+  display:inline-flex;align-items:center;gap:.7em;
+  background:var(--oliva-osc);color:var(--crema);
+  font-family:var(--sans);font-weight:600;font-size:.8125rem;
+  letter-spacing:.12em;text-transform:uppercase;text-decoration:none;
+  padding:1.05em 1.5em .95em;border-radius:2px;
+  min-height:48px;align-self:flex-start;
+  transition:background-color .2s ease;
+}
+.btn:hover{background:var(--bosque)}
+.btn svg{width:16px;height:16px;flex:none;margin-top:-2px}
+.hero__cta{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+.hero__note{font-size:.8125rem;color:var(--oliva-osc);margin:0}
+
+.portrait{margin:0;position:relative}
+.portrait__frame{
+  aspect-ratio:4/5;background:var(--pergamino);
+  display:grid;place-items:center;
+  border:1px solid rgba(119,121,58,.35);
+}
+.portrait__frame span{color:var(--oliva-osc)}
+.portrait figcaption{margin-top:10px;color:var(--oliva-osc);font-size:.6875rem}
+
+/* ---------- 2. Carta ---------- */
+.carta{background:var(--pergamino);padding-block:64px}
+.carta__grid{display:grid;gap:24px}
+.carta__label{color:var(--oliva-osc);margin:0;padding-top:10px;border-top:var(--line);align-self:start;max-width:220px}
+.carta__body{max-width:40rem}
+.carta blockquote{margin:0}
+.carta blockquote p{
+  font-family:var(--serif);font-weight:500;
+  font-size:clamp(1.4rem, 2.6vw + .8rem, 2.125rem);
+  line-height:1.32;margin:0;text-wrap:pretty;
+}
+.firma{
+  font-family:var(--serif);font-weight:500;font-size:1.5rem;
+  color:var(--tierra);margin:28px 0 0;text-align:right;
+}
+
+/* ---------- 3. Ficha (único bloque oscuro) ---------- */
+.bosque{background:var(--bosque);color:var(--crema)}
+.paisaje{margin:0;background:var(--crema)}
+.paisaje img{width:100%;height:clamp(140px, 26vw, 360px)}
+.ficha{padding-block:48px 64px}
+.ficha__head{color:var(--pergamino);margin:0 0 28px}
+.ficha dl{margin:0;display:grid}
+.dato{padding:22px 0;border-top:1px solid var(--oliva)}
+.dato:last-child{border-bottom:1px solid var(--oliva)}
+.dato dt{font-family:var(--serif);font-weight:500;font-size:2rem;line-height:1.1;margin:0}
+.dato dd{margin:8px 0 0;color:var(--pergamino)}
+
+/* ---------- 4. Cierre ---------- */
+.cierre{padding-block:72px 40px}
+.cierre__grid{display:grid;gap:32px}
+.cierre__linea{width:100%;height:auto;max-height:96px;margin-bottom:48px}
+.cierre h2{
+  font-family:var(--serif);font-weight:500;
+  font-size:clamp(2rem, 4vw + 1rem, 3.25rem);
+  line-height:1.1;margin:0;max-width:18ch;text-wrap:balance;
+}
+.cierre__side{display:flex;flex-direction:column;gap:28px}
+.redes{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 28px}
+.redes a{
+  display:inline-block;padding:12px 0;color:var(--oliva-osc);text-decoration:none;
+  border-bottom:1px solid transparent;
+}
+.redes a:hover{border-bottom-color:var(--oliva-osc)}
+.oficina{font-size:.875rem;margin:0;color:var(--carbon)}
+
+.pie{margin-top:64px;padding-top:20px;border-top:var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-size:.75rem;color:var(--oliva-osc)}
+.pie p{margin:0}
+
+/* ---------- Botón flotante (móvil) ---------- */
+.flota{
+  position:fixed;right:16px;bottom:max(16px, env(safe-area-inset-bottom));z-index:10;
+  display:inline-flex;align-items:center;gap:.6em;
+  background:var(--oliva-osc);color:var(--crema);text-decoration:none;
+  font-weight:600;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:.95em 1.15em .85em;border-radius:2px;min-height:44px;
+  border:1px solid rgba(244,241,230,.55);box-shadow:0 2px 10px rgba(46,59,42,.18);
+  opacity:0;transform:translateY(8px);pointer-events:none;visibility:hidden;
+  transition:opacity .3s ease, transform .3s ease, visibility 0s linear .3s;
+}
+.flota svg{width:16px;height:16px;margin-top:-2px}
+.flota.is-on{opacity:1;transform:none;pointer-events:auto;visibility:visible;transition:opacity .3s ease, transform .3s ease}
+
+/* ---------- Fade-in suave ---------- */
+.js .reveal{opacity:0;transform:translateY(10px);transition:opacity .9s ease, transform .9s ease}
+.js .reveal.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .flota,.flota.is-on,.btn{transition:none}
+}
+
+/* ---------- Tablet ---------- */
+@media (min-width:640px){
+  :root{--gutter:40px}
+  .ficha dl{grid-template-columns:repeat(3,1fr)}
+  .dato{padding:4px 24px 8px;border-top:0;border-left:1px solid var(--oliva)}
+  .dato:first-child{padding-left:0;border-left:0}
+  .dato:last-child{border-bottom:0}
+  .ficha__head{padding-bottom:28px;border-bottom:1px solid var(--oliva);margin-bottom:36px}
+}
+
+/* ---------- Escritorio: grilla editorial asimétrica ---------- */
+@media (min-width:960px){
+  :root{--gutter:56px}
+  .hero{padding-top:40px;padding-bottom:0}
+  .hero__grid{grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:end}
+  .hero__text{grid-column:1 / span 6;padding-bottom:88px;gap:24px}
+  .hero__logo{width:260px;margin-bottom:72px}
+  .portrait{grid-column:8 / span 5;margin-right:calc(var(--gutter) * -1)}
+  .lede{font-size:1.1875rem}
+  .flota{display:none}
+
+  .carta{padding-block:120px}
+  .carta__grid{grid-template-columns:repeat(12,1fr);column-gap:24px}
+  .carta__label{grid-column:1 / span 3}
+  .carta__body{grid-column:5 / span 8}
+
+  .ficha{padding-block:72px 96px}
+  .dato{padding:4px 36px 8px}
+  .dato dt{font-size:2.5rem}
+
+  .cierre{padding-block:128px 40px}
+  .cierre__grid{grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:end}
+  .cierre h2{grid-column:1 / span 7}
+  .cierre__side{grid-column:9 / span 4}
+}
+@media (min-width:1360px){
+  .portrait{margin-right:calc((100vw - var(--max)) / -2 - var(--gutter))}
+  .portrait__frame{max-height:calc(100vh - 80px);aspect-ratio:auto;height:min(760px, calc(100vh - 80px))}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="hero">
+  <div class="wrap hero__grid">
+    <div class="hero__text">
+      <img class="hero__logo" src="brand/agustino-logo.svg" width="720" height="350"
+           alt="Agustino — Invierte en tu futuro" fetchpriority="high">
+      <p class="label eyebrow">Asesor de parcelas y terrenos</p>
+      <h1>Antes de comprar, entiende lo que compras.</h1>
+      <p class="lede">Soy <strong translate="no">Agustino</strong>. Te acompaño a elegir bien, no rápido.</p>
+      <div class="hero__cta">
+        <a class="btn" data-wa href="https://wa.me/56957860849?text=Hola%20Agustino%2C%20vengo%20desde%20tu%20web"
+           target="_blank" rel="noopener" aria-label="Conversemos por WhatsApp (abre en una pestaña nueva)">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
+          Conversemos por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <figure class="portrait">
+      <!-- Reemplazar el placeholder por el retrato:
+           <img src="img/agustino.jpg" width="1200" height="1500" alt="Agustino de pie en una parcela, con el campo detrás"> -->
+      <div class="portrait__frame" role="img" aria-label="Espacio reservado para el retrato de Agustino">
+        <span class="label">Foto</span>
+      </div>
+    </figure>
+  </div>
+</header>
+
+<main id="contenido">
+  <section class="carta" aria-labelledby="carta-t">
+    <div class="wrap carta__grid">
+      <h2 id="carta-t" class="label carta__label reveal">Una carta breve</h2>
+      <div class="carta__body reveal">
+        <blockquote>
+          <p>Hace cuatro años que recorro parcelas con personas que buscan algo más que un terreno: espacio, calma, un lugar donde proyectar. Mi trabajo es explicarte lo que de verdad importa —rol, factibilidad, accesos, papeles— y acompañarte hasta la escritura.</p>
+        </blockquote>
+        <p class="firma" translate="no">— Agustino</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bosque" aria-labelledby="ficha-t">
+    <figure class="paisaje">
+      <img src="brand/paisaje-capas.svg" width="1024" height="330" loading="lazy" decoding="async"
+           alt="Ilustración de cerros y viñedo bajo el sol">
+    </figure>
+    <div class="wrap ficha">
+      <h2 id="ficha-t" class="label ficha__head">Ficha técnica</h2>
+      <dl class="reveal">
+        <div class="dato"><dt>4 años</dt><dd class="label">en el rubro</dd></div>
+        <div class="dato"><dt>Especialista</dt><dd class="label">en parcelas</dd></div>
+        <div class="dato"><dt>Martillero público</dt><dd class="label">y corredor inmobiliario</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="cierre" aria-labelledby="cierre-t">
+    <div class="wrap">
+      <img class="cierre__linea reveal" src="brand/cerros-linea.svg" width="1024" height="120" alt="" loading="lazy">
+      <div class="cierre__grid">
+        <h2 id="cierre-t" class="reveal">¿Tienes una parcela en mente o recién empiezas a buscar?</h2>
+        <div class="cierre__side reveal">
+          <a class="btn" data-wa href="https://wa.me/56957860849?text=Hola%20Agustino%2C%20vengo%20desde%20tu%20web"
+             target="_blank" rel="noopener" aria-label="Conversemos por WhatsApp (abre en una pestaña nueva)">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
+            Conversemos por WhatsApp
+          </a>
+          <nav aria-label="Redes sociales" id="redes-nav">
+            <ul class="redes label" id="redes"></ul>
+          </nav>
+          <p class="oficina">Asesor en Inmobiliaria Toscana · Alsacia 105, Las Condes</p>
+        </div>
+      </div>
+
+      <footer class="pie">
+        <p>© 2026 <span translate="no">Agustino</span></p>
+        <p>Diseño: SP Agency</p>
+      </footer>
+    </div>
+  </section>
+</main>
+
+<a class="flota" id="flota" href="https://wa.me/56957860849?text=Hola%20Agustino%2C%20vengo%20desde%20tu%20web"
+   target="_blank" rel="noopener" aria-label="Escribir a Agustino por WhatsApp (abre en una pestaña nueva)" tabindex="-1" aria-hidden="true">
+  <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
+  WhatsApp
+</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.22 8.23Zm4.51-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.24-.64.8-.78.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/>
+  </symbol>
+</svg>
+
+<script>
+/* Redes: completa la URL para mostrar una red. Si está vacía, no aparece. */
+const REDES = [
+  { nombre: "Instagram", url: "https://www.instagram.com/agustino_bienes.raices/" },
+  { nombre: "TikTok",    url: "" },
+  { nombre: "Facebook",  url: "" },
+  { nombre: "LinkedIn",  url: "" }
+];
+
+(function () {
+  const ul = document.getElementById("redes");
+  if (!REDES.some(r => r.url)) document.getElementById("redes-nav").hidden = true;
+  REDES.filter(r => r.url).forEach(r => {
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = r.url; a.target = "_blank"; a.rel = "noopener";
+    a.textContent = r.nombre;
+    a.setAttribute("aria-label", r.nombre + " de Agustino (abre en una pestaña nueva)");
+    li.appendChild(a); ul.appendChild(li);
+  });
+
+  if (!("IntersectionObserver" in window)) return;
+  document.documentElement.classList.add("js");
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } });
+  }, { rootMargin: "0px 0px -8% 0px" });
+  document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+  /* Botón flotante: visible fuera del hero y antes del cierre */
+  const flota = document.getElementById("flota");
+  const hero = document.querySelector(".hero");
+  const cierre = document.querySelector(".cierre__side");
+  let heroVisible = true, cierreVisible = false;
+  const set = () => {
+    const on = !heroVisible && !cierreVisible;
+    flota.classList.toggle("is-on", on);
+    flota.setAttribute("aria-hidden", on ? "false" : "true");
+    flota.tabIndex = on ? 0 : -1;
+  };
+  new IntersectionObserver(([e]) => { heroVisible = e.isIntersecting; set(); }).observe(hero);
+  new IntersectionObserver(([e]) => { cierreVisible = e.isIntersecting; set(); }).observe(cierre);
+})();
+</script>
+</body>
+</html>
