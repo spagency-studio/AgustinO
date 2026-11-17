@@ -11,14 +11,13 @@
 <meta property="og:locale" content="es_CL">
 <meta property="og:title" content="Agustino · Asesor de parcelas y terrenos en Chile">
 <meta property="og:description" content="Antes de comprar, entiende lo que compras. Te acompaño a elegir bien, no rápido.">
-<!-- Reemplazar por el retrato (img/agustino-og.jpg, 1200×630) cuando esté disponible.
-     Las URL absolutas asumen GitHub Pages; cambiarlas si se usa un dominio propio. -->
+<!-- Las URL absolutas asumen GitHub Pages; cambiarlas si se usa un dominio propio. -->
 <link rel="canonical" href="https://spagency-studio.github.io/agustino/">
 <meta property="og:url" content="https://spagency-studio.github.io/agustino/">
-<meta property="og:image" content="https://spagency-studio.github.io/agustino/img/og-campo.jpg">
+<meta property="og:image" content="https://spagency-studio.github.io/agustino/img/og-agustino.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Viñedo y cerros al atardecer en el campo chileno">
+<meta property="og:image:alt" content="Logo de Agustino sobre una ilustración de cerros y viñedo">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="brand/favicon.svg" type="image/svg+xml">
@@ -71,10 +70,11 @@ a{color:inherit}
 .rule{display:block;height:0;border:0;border-top:var(--line);margin:0}
 
 /* ---------- 1. Hero ---------- */
-.hero{padding-top:28px;padding-bottom:56px}
-.hero__grid{display:grid;gap:32px}
-.hero__logo{width:200px;margin-left:-4px}
-.hero__text{display:flex;flex-direction:column;gap:20px}
+.hero{padding-top:28px;padding-bottom:0}
+.hero__grid{display:grid;gap:20px}
+.hero__logo{width:184px;margin-left:-4px;margin-bottom:28px}
+.hero__side{display:flex;flex-direction:column;gap:24px;margin-top:4px}
+.hero__horizonte{width:100%;height:auto;margin-top:48px}
 .eyebrow{color:var(--oliva-osc);display:flex;align-items:center;gap:14px;margin:0}
 .eyebrow::before{content:"";width:28px;border-top:var(--line);flex:none}
 h1{
@@ -97,17 +97,6 @@ h1{
 }
 .btn:hover{background:var(--bosque)}
 .btn svg{width:16px;height:16px;flex:none;margin-top:-2px}
-.hero__cta{display:flex;flex-direction:column;gap:12px;margin-top:6px}
-.hero__note{font-size:.8125rem;color:var(--oliva-osc);margin:0}
-
-.portrait{margin:0;position:relative}
-.portrait__frame{
-  aspect-ratio:4/5;background:var(--pergamino);
-  display:grid;place-items:center;
-  border:1px solid rgba(119,121,58,.35);
-}
-.portrait__frame span{color:var(--oliva-osc)}
-.portrait figcaption{margin-top:10px;color:var(--oliva-osc);font-size:.6875rem}
 
 /* ---------- 2. Carta ---------- */
 .carta{background:var(--pergamino);padding-block:64px}
@@ -130,7 +119,9 @@ h1{
 .paisaje{margin:0;background:var(--crema)}
 .paisaje img{width:100%;height:clamp(140px, 26vw, 360px)}
 .ficha{padding-block:48px 64px}
-.ficha__head{color:var(--pergamino);margin:0 0 28px}
+.ficha__head{display:flex;justify-content:space-between;align-items:center;gap:24px;color:var(--pergamino);margin:0 0 28px}
+.ficha__head h2{margin:0}
+.ficha__logo{width:120px;flex:none}
 .ficha dl{margin:0;display:grid}
 .dato{padding:22px 0;border-top:1px solid var(--oliva)}
 .dato:last-child{border-bottom:1px solid var(--oliva)}
@@ -140,7 +131,6 @@ h1{
 /* ---------- 4. Cierre ---------- */
 .cierre{padding-block:72px 40px}
 .cierre__grid{display:grid;gap:32px}
-.cierre__linea{width:100%;height:auto;max-height:96px;margin-bottom:48px}
 .cierre h2{
   font-family:var(--serif);font-weight:500;
   font-size:clamp(2rem, 4vw + 1rem, 3.25rem);
@@ -193,11 +183,14 @@ h1{
 /* ---------- Escritorio: grilla editorial asimétrica ---------- */
 @media (min-width:960px){
   :root{--gutter:56px}
-  .hero{padding-top:40px;padding-bottom:0}
-  .hero__grid{grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:end}
-  .hero__text{grid-column:1 / span 6;padding-bottom:88px;gap:24px}
-  .hero__logo{width:260px;margin-bottom:72px}
-  .portrait{grid-column:8 / span 5;margin-right:calc(var(--gutter) * -1)}
+  .hero{padding-top:40px}
+  .hero__grid{grid-template-columns:repeat(12,1fr);column-gap:24px;row-gap:0;align-items:end}
+  .hero__logo{grid-column:1 / span 3;width:260px;margin-bottom:0}
+  .hero__eyebrow{grid-column:1 / span 6;margin-top:104px;margin-bottom:28px}
+  .hero__title{grid-column:1 / span 8;font-size:clamp(4.25rem, 5.6vw, 5.75rem);max-width:14ch}
+  .hero__side{grid-column:9 / span 4;padding-bottom:14px;margin-top:0}
+  .hero__horizonte{margin-top:72px}
+  .ficha__logo{width:150px}
   .lede{font-size:1.1875rem}
   .flota{display:none}
 
@@ -215,10 +208,6 @@ h1{
   .cierre h2{grid-column:1 / span 7}
   .cierre__side{grid-column:9 / span 4}
 }
-@media (min-width:1360px){
-  .portrait{margin-right:calc((100vw - var(--max)) / -2 - var(--gutter))}
-  .portrait__frame{max-height:calc(100vh - 80px);aspect-ratio:auto;height:min(760px, calc(100vh - 80px))}
-}
 </style>
 </head>
 <body>
@@ -226,28 +215,21 @@ h1{
 
 <header class="hero">
   <div class="wrap hero__grid">
-    <div class="hero__text">
-      <img class="hero__logo" src="brand/agustino-logo.svg" width="720" height="350"
-           alt="Agustino — Invierte en tu futuro" fetchpriority="high">
-      <p class="label eyebrow">Asesor de parcelas y terrenos</p>
-      <h1>Antes de comprar, entiende lo que compras.</h1>
+    <img class="hero__logo" src="brand/agustino-logo.svg" width="720" height="350"
+         alt="Agustino — Invierte en tu futuro" fetchpriority="high">
+    <p class="label eyebrow hero__eyebrow">Asesor de parcelas y terrenos</p>
+    <h1 class="hero__title">Antes de comprar, entiende lo que compras.</h1>
+    <div class="hero__side">
       <p class="lede">Soy <strong translate="no">Agustino</strong>. Te acompaño a elegir bien, no rápido.</p>
-      <div class="hero__cta">
-        <a class="btn" data-wa href="https://wa.me/56957860849?text=Hola%20Agustino%2C%20vengo%20desde%20tu%20web"
-           target="_blank" rel="noopener" aria-label="Conversemos por WhatsApp (abre en una pestaña nueva)">
-          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
-          Conversemos por WhatsApp
-        </a>
-      </div>
+      <a class="btn" data-wa href="https://wa.me/56957860849?text=Hola%20Agustino%2C%20vengo%20desde%20tu%20web"
+         target="_blank" rel="noopener" aria-label="Conversemos por WhatsApp (abre en una pestaña nueva)">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
+        Conversemos por WhatsApp
+      </a>
     </div>
-
-    <figure class="portrait">
-      <!-- Reemplazar el placeholder por el retrato:
-           <img src="img/agustino.jpg" width="1200" height="1500" alt="Agustino de pie en una parcela, con el campo detrás"> -->
-      <div class="portrait__frame" role="img" aria-label="Espacio reservado para el retrato de Agustino">
-        <span class="label">Foto</span>
-      </div>
-    </figure>
+  </div>
+  <div class="wrap">
+    <img class="hero__horizonte" src="brand/cerros-linea.svg" width="1024" height="120" alt="">
   </div>
 </header>
 
@@ -270,7 +252,10 @@ h1{
            alt="Ilustración de cerros y viñedo bajo el sol">
     </figure>
     <div class="wrap ficha">
-      <h2 id="ficha-t" class="label ficha__head">Ficha técnica</h2>
+      <div class="ficha__head">
+        <h2 id="ficha-t" class="label">Ficha técnica</h2>
+        <img class="ficha__logo" src="brand/agustino-logo-claro.svg" width="720" height="350" alt="" loading="lazy">
+      </div>
       <dl class="reveal">
         <div class="dato"><dt>4 años</dt><dd class="label">en el rubro</dd></div>
         <div class="dato"><dt>Especialista</dt><dd class="label">en parcelas</dd></div>
@@ -281,7 +266,6 @@ h1{
 
   <section class="cierre" aria-labelledby="cierre-t">
     <div class="wrap">
-      <img class="cierre__linea reveal" src="brand/cerros-linea.svg" width="1024" height="120" alt="" loading="lazy">
       <div class="cierre__grid">
         <h2 id="cierre-t" class="reveal">¿Tienes una parcela en mente o recién empiezas a buscar?</h2>
         <div class="cierre__side reveal">

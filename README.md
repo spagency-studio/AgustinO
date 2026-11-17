@@ -3,13 +3,11 @@
 Landing de presentación de Agustino, asesor de parcelas y terrenos en Chile.
 
 - `index.html`: página completa (CSS y JS embebidos, Google Fonts).
-- `brand/`: logo, ilustraciones y favicon en SVG.
-- `img/og-campo.jpg`: imagen provisoria para compartir en redes (reemplazar por el retrato).
+- `brand/`: logos (claro y oscuro), ilustraciones y favicon en SVG.
+- `img/og-agustino.png`: imagen para compartir en redes (1200×630).
 
-## Pendiente
-- Retrato `img/agustino.jpg` (hoy hay un placeholder "FOTO" en el hero) e imagen OG con el retrato.
-- Logo claro en SVG para fondo oscuro.
-- URLs de TikTok, Facebook y LinkedIn en el arreglo `REDES` al final de `index.html`.
+## Redes
+Se editan en el arreglo `REDES` al final de `index.html`. Una red sin URL no se muestra (hoy solo Instagram).
 
 ## Publicar con GitHub Pages
 Settings → Pages → Source: *Deploy from a branch* → `main` / `(root)`.
