@@ -1,24 +1,29 @@
 <!doctype html>
-<html lang="es-CL">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Agustino · Asesor de parcelas y terrenos en Chile</title>
-<meta name="description" content="Agustino, martillero público y corredor inmobiliario. Te asesoro en la compra de parcelas y terrenos en Chile para que entiendas lo que compras.">
-<meta name="theme-color" content="#F4F1E6">
+<meta name="description" content="Agustino, martillero público y corredor inmobiliario con más de 4 años asesorando a familias. Te ayudo a comprar parcelas y terrenos en Chile con claridad.">
+<meta name="theme-color" content="#2E3B2A">
 
-<meta property="og:type" content="website">
-<meta property="og:locale" content="es_CL">
-<meta property="og:title" content="Agustino · Asesor de parcelas y terrenos en Chile">
-<meta property="og:description" content="Antes de comprar, entiende lo que compras. Te acompaño a elegir bien, no rápido.">
 <!-- Las URL absolutas asumen GitHub Pages; cambiarlas si se usa un dominio propio. -->
 <link rel="canonical" href="https://spagency-studio.github.io/agustino/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CL">
+<meta property="og:site_name" content="Agustino">
+<meta property="og:title" content="Agustino · Asesor de parcelas y terrenos en Chile">
+<meta property="og:description" content="Antes de comprar, entiende lo que compras. Te acompaño a elegir bien, no rápido.">
 <meta property="og:url" content="https://spagency-studio.github.io/agustino/">
-<meta property="og:image" content="https://spagency-studio.github.io/agustino/img/og-agustino.png">
+<meta property="og:image" content="https://spagency-studio.github.io/agustino/brand/paisaje-hero.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Logo de Agustino sobre una ilustración de cerros y viñedo">
+<meta property="og:image:alt" content="Viñedo y cerros a la luz de la tarde en el campo chileno">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Agustino · Asesor de parcelas y terrenos en Chile">
+<meta name="twitter:description" content="Antes de comprar, entiende lo que compras. Te acompaño a elegir bien, no rápido.">
+<meta name="twitter:image" content="https://spagency-studio.github.io/agustino/brand/paisaje-hero.jpg">
+<meta name="twitter:image:alt" content="Viñedo y cerros a la luz de la tarde en el campo chileno">
 
 <link rel="icon" href="brand/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="brand/apple-touch-icon.png">
@@ -26,6 +31,27 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Josefin+Sans:wght@400;600&display=swap">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Agustino",
+  "description": "Asesor de parcelas y terrenos en Chile. Martillero público y corredor inmobiliario.",
+  "url": "https://spagency-studio.github.io/agustino/",
+  "image": "https://spagency-studio.github.io/agustino/brand/paisaje-hero.jpg",
+  "telephone": "+56957860849",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Alsacia 105",
+    "addressLocality": "Las Condes",
+    "addressRegion": "Santiago",
+    "addressCountry": "CL"
+  },
+  "areaServed": "CL",
+  "sameAs": ["https://www.instagram.com/agustino_bienes.raices/"]
+}
+</script>
 
 <style>
 :root{
@@ -52,10 +78,11 @@ body{
   font-family:var(--sans);font-size:1rem;line-height:1.6;
   -webkit-font-smoothing:antialiased;
 }
-img{display:block;max-width:100%;height:auto}
+img,video{display:block;max-width:100%}
+img{height:auto}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--oliva-osc);outline-offset:3px}
-.bosque :focus-visible{outline-color:var(--crema)}
+.hero :focus-visible,.bosque :focus-visible{outline-color:var(--crema)}
 
 .skip{position:absolute;left:var(--gutter);top:-100px;background:var(--carbon);color:var(--crema);padding:.6rem 1rem;z-index:20;font-size:.875rem}
 .skip:focus{top:12px}
@@ -67,25 +94,8 @@ a{color:inherit}
   font-family:var(--sans);font-weight:600;font-size:.75rem;
   letter-spacing:.12em;text-transform:uppercase;line-height:1.4;
 }
-.rule{display:block;height:0;border:0;border-top:var(--line);margin:0}
 
-/* ---------- 1. Hero ---------- */
-.hero{padding-top:28px;padding-bottom:0}
-.hero__grid{display:grid;gap:20px}
-.hero__logo{width:184px;margin-left:-4px;margin-bottom:28px}
-.hero__side{display:flex;flex-direction:column;gap:24px;margin-top:4px}
-.hero__horizonte{width:100%;height:auto;margin-top:48px}
-.eyebrow{color:var(--oliva-osc);display:flex;align-items:center;gap:14px;margin:0}
-.eyebrow::before{content:"";width:28px;border-top:var(--line);flex:none}
-h1{
-  font-family:var(--serif);font-weight:500;
-  font-size:clamp(2.6rem, 8.2vw + .4rem, 4.75rem);
-  line-height:1.02;letter-spacing:-.01em;margin:0;
-  text-wrap:balance;
-}
-.lede{font-size:1.0625rem;line-height:1.55;margin:0;max-width:30ch}
-.lede strong{font-weight:600}
-
+/* ---------- Botón y enlace de Instagram ---------- */
 .btn{
   display:inline-flex;align-items:center;gap:.7em;
   background:var(--oliva-osc);color:var(--crema);
@@ -97,12 +107,45 @@ h1{
 }
 .btn:hover{background:var(--bosque)}
 .btn svg{width:16px;height:16px;flex:none;margin-top:-2px}
+.ig{
+  display:inline-flex;align-items:center;gap:.55em;min-height:44px;
+  font-size:.9375rem;text-decoration:none;color:var(--oliva-osc);
+}
+.ig svg{width:18px;height:18px;flex:none}
+.ig span{border-bottom:1px solid currentColor;padding-bottom:1px}
+.ig:hover span{border-bottom-width:2px}
 
-/* ---------- 2. Carta ---------- */
+/* ---------- 1. Hero con paisaje ---------- */
+.hero{
+  position:relative;isolation:isolate;color:var(--crema);
+  min-height:85vh;min-height:85svh;display:flex;background:var(--bosque);overflow:hidden;
+}
+.hero__media{position:absolute;inset:0;z-index:-2}
+.hero__media img,.hero__media video{width:100%;height:100%;object-fit:cover}
+.hero__foto{display:none;height:100%}
+.hero__velo{position:absolute;inset:0;z-index:-1;background:rgba(46,59,42,.42)}
+.hero__content{display:flex;flex-direction:column;padding-top:24px;padding-bottom:0}
+.hero__logo{width:172px;margin-left:-4px}
+/* Franja oscura detrás del texto para asegurar contraste AA sobre la foto o el video */
+.hero__texto{margin-top:auto;display:flex;flex-direction:column;gap:18px;
+  margin-inline:calc(var(--gutter) * -1);padding:28px var(--gutter) 32px;background:rgba(46,59,42,.8)}
+.eyebrow{color:var(--crema);display:flex;align-items:center;gap:14px;margin:0}
+.eyebrow::before{content:"";width:28px;border-top:1px solid var(--crema);flex:none}
+h1{
+  font-family:var(--serif);font-weight:500;
+  font-size:clamp(2.6rem, 8.2vw + .4rem, 4.75rem);
+  line-height:1.02;letter-spacing:-.01em;margin:0;
+  text-wrap:balance;
+}
+.lede{font-size:1.0625rem;line-height:1.55;margin:0;max-width:30ch}
+.lede strong{font-weight:600}
+.hero__acciones{display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px;margin-top:6px}
+.hero .ig{color:var(--crema)}
+
+/* ---------- 2. Carta + foto ---------- */
 .carta{background:var(--pergamino);padding-block:64px}
-.carta__grid{display:grid;gap:24px}
-.carta__label{color:var(--oliva-osc);margin:0;padding-top:10px;border-top:var(--line);align-self:start;max-width:220px}
-.carta__body{max-width:40rem}
+.carta__grid{display:grid;gap:40px}
+.carta__label{color:var(--oliva-osc);margin:0 0 24px;padding-top:10px;border-top:var(--line);max-width:220px}
 .carta blockquote{margin:0}
 .carta blockquote p{
   font-family:var(--serif);font-weight:500;
@@ -113,13 +156,16 @@ h1{
   font-family:var(--serif);font-weight:500;font-size:1.5rem;
   color:var(--tierra);margin:28px 0 0;text-align:right;
 }
+.carta__foto{margin:0}
+.carta__foto img{width:100%}
 
 /* ---------- 3. Ficha (único bloque oscuro) ---------- */
 .bosque{background:var(--bosque);color:var(--crema)}
-.paisaje{margin:0;background:var(--crema)}
-.paisaje img{width:100%;height:clamp(140px, 26vw, 360px)}
-.ficha{padding-block:48px 64px}
-.ficha__head{display:flex;justify-content:space-between;align-items:center;gap:24px;color:var(--pergamino);margin:0 0 28px}
+.ficha{padding-block:56px 64px}
+.ficha__top{display:grid;gap:28px;margin-bottom:28px}
+.ficha__video{display:none;margin:0;max-width:640px}
+.ficha__video video{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;background:var(--bosque)}
+.ficha__head{display:flex;justify-content:space-between;align-items:center;gap:24px;color:var(--pergamino)}
 .ficha__head h2{margin:0}
 .ficha__logo{width:120px;flex:none}
 .ficha dl{margin:0;display:grid}
@@ -129,24 +175,24 @@ h1{
 .dato dd{margin:8px 0 0;color:var(--pergamino)}
 
 /* ---------- 4. Cierre ---------- */
-.cierre{padding-block:72px 40px}
+.cierre{padding-block:72px 32px}
 .cierre__grid{display:grid;gap:32px}
 .cierre h2{
   font-family:var(--serif);font-weight:500;
   font-size:clamp(2rem, 4vw + 1rem, 3.25rem);
   line-height:1.1;margin:0;max-width:18ch;text-wrap:balance;
 }
-.cierre__side{display:flex;flex-direction:column;gap:28px}
+.cierre__side{display:flex;flex-direction:column;gap:20px}
 .redes{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 28px}
-.redes a{
-  display:inline-block;padding:12px 0;color:var(--oliva-osc);text-decoration:none;
-  border-bottom:1px solid transparent;
-}
+.redes a{display:inline-flex;align-items:center;min-height:44px;color:var(--oliva-osc);text-decoration:none;border-bottom:1px solid transparent}
 .redes a:hover{border-bottom-color:var(--oliva-osc)}
 .oficina{font-size:.875rem;margin:0;color:var(--carbon)}
 
-.pie{margin-top:64px;padding-top:20px;border-top:var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-size:.75rem;color:var(--oliva-osc)}
+.cerros{width:100%;height:auto;max-height:72px;margin-top:72px;opacity:.9}
+.pie{margin-top:16px;padding-top:16px;border-top:var(--line);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 24px;font-size:.8125rem;color:var(--oliva-osc)}
 .pie p{margin:0}
+.pie .ig{font-size:.8125rem}
+.pie .ig svg{width:16px;height:16px}
 
 /* ---------- Botón flotante (móvil) ---------- */
 .flota{
@@ -177,33 +223,36 @@ h1{
   .dato{padding:4px 24px 8px;border-top:0;border-left:1px solid var(--oliva)}
   .dato:first-child{padding-left:0;border-left:0}
   .dato:last-child{border-bottom:0}
-  .ficha__head{padding-bottom:28px;border-bottom:1px solid var(--oliva);margin-bottom:36px}
+  .ficha__top{padding-bottom:28px;border-bottom:1px solid var(--oliva);margin-bottom:36px}
 }
 
-/* ---------- Escritorio: grilla editorial asimétrica ---------- */
+/* ---------- Escritorio ---------- */
 @media (min-width:960px){
   :root{--gutter:56px}
-  .hero{padding-top:40px}
-  .hero__grid{grid-template-columns:repeat(12,1fr);column-gap:24px;row-gap:0;align-items:end}
-  .hero__logo{grid-column:1 / span 3;width:260px;margin-bottom:0}
-  .hero__eyebrow{grid-column:1 / span 6;margin-top:104px;margin-bottom:28px}
-  .hero__title{grid-column:1 / span 8;font-size:clamp(4.25rem, 5.6vw, 5.75rem);max-width:17ch}
-  .hero__side{grid-column:9 / span 4;padding-bottom:14px;margin-top:0}
-  .hero__horizonte{margin-top:72px}
-  .ficha__logo{width:150px}
+  /* El video es de 624 px: en escritorio el hero usa la foto y el video pasa a la ficha */
+  .hero__video{display:none}
+  .hero__foto{display:block}
+  .hero__content{padding-top:40px;padding-bottom:64px;display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;align-content:space-between}
+  .hero__logo{grid-column:1 / span 3;width:230px}
+  .hero__texto{grid-column:1 / span 7;gap:22px;margin-inline:-44px 0;padding:40px 44px 44px}
+  .hero__title{font-size:clamp(3.75rem, 4.9vw, 5rem)}
   .lede{font-size:1.1875rem}
+  .ficha__logo{width:150px}
   .flota{display:none}
 
-  .carta{padding-block:120px}
-  .carta__grid{grid-template-columns:repeat(12,1fr);column-gap:24px}
-  .carta__label{grid-column:1 / span 3}
-  .carta__body{grid-column:5 / span 8}
+  .carta{padding-block:112px}
+  .carta__grid{grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:center}
+  .carta__foto{grid-column:1 / span 5;grid-row:1}
+  .carta__body{grid-column:7 / span 6}
 
-  .ficha{padding-block:72px 96px}
+  .ficha{padding-block:88px 96px}
+  .ficha__top{grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:end;gap:0 24px}
+  .ficha__video{display:block;grid-column:1 / span 7}
+  .ficha__head{grid-column:9 / span 4;flex-direction:column;align-items:flex-start;gap:20px}
   .dato{padding:4px 36px 8px}
   .dato dt{font-size:2.5rem}
 
-  .cierre{padding-block:128px 40px}
+  .cierre{padding-block:128px 32px}
   .cierre__grid{grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:end}
   .cierre h2{grid-column:1 / span 7}
   .cierre__side{grid-column:9 / span 4}
@@ -214,50 +263,78 @@ h1{
 <a class="skip" href="#contenido">Saltar al contenido</a>
 
 <header class="hero">
-  <div class="wrap hero__grid">
-    <img class="hero__logo" src="brand/agustino-logo.svg" width="720" height="350"
-         alt="Agustino — Invierte en tu futuro" fetchpriority="high">
-    <p class="label eyebrow hero__eyebrow">Asesor de parcelas y terrenos</p>
-    <h1 class="hero__title">Antes de comprar, entiende lo que compras.</h1>
-    <div class="hero__side">
-      <p class="lede">Soy <strong translate="no">Agustino</strong>. Te acompaño a elegir bien, no rápido.</p>
-      <a class="btn" data-wa href="https://wa.me/56957860849?text=Hola%20Agustino%2C%20vengo%20desde%20tu%20web"
-         target="_blank" rel="noopener" aria-label="Conversemos por WhatsApp (abre en una pestaña nueva)">
-        <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
-        Conversemos por WhatsApp
-      </a>
-    </div>
+  <div class="hero__media">
+    <!-- Móvil: video (con poster). Escritorio: foto, porque el video es de 624 px. -->
+    <video class="hero__video" data-media="(max-width: 959px)" muted loop playsinline preload="metadata"
+           poster="brand/paisaje-loop-poster.jpg" width="624" height="624" aria-hidden="true">
+      <source src="brand/paisaje-loop.webm" type="video/webm">
+      <source src="brand/paisaje-loop.mp4" type="video/mp4">
+    </video>
+    <picture class="hero__foto">
+      <source media="(max-width: 959px)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACw=">
+      <img src="brand/paisaje-hero.webp" width="1024" height="1024" fetchpriority="high"
+           alt="Viñedo en el valle con cerros al fondo, a la luz de la tarde">
+    </picture>
   </div>
-  <div class="wrap">
-    <img class="hero__horizonte" src="brand/cerros-linea.svg" width="1024" height="120" alt="">
+  <div class="hero__velo"></div>
+
+  <div class="wrap hero__content">
+    <img class="hero__logo" src="brand/agustino-logo-claro.svg" width="720" height="350"
+         alt="Agustino — Invierte en tu futuro">
+    <div class="hero__texto">
+      <p class="label eyebrow">Asesor de parcelas y terrenos</p>
+      <h1 class="hero__title">Antes de comprar, entiende lo que compras.</h1>
+      <p class="lede">Soy <strong translate="no">Agustino</strong>. Te acompaño a elegir bien, no rápido.</p>
+      <div class="hero__acciones">
+        <a class="btn" href="https://wa.me/56957860849?text=Hola%20Agustino%2C%20vengo%20desde%20tu%20web"
+           target="_blank" rel="noopener" aria-label="Conversemos por WhatsApp (abre en una pestaña nueva)">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
+          Conversemos por WhatsApp
+        </a>
+        <a class="ig" href="https://www.instagram.com/agustino_bienes.raices/" target="_blank" rel="noopener" aria-label="Instagram de Agustino">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-ig"/></svg>
+          <span translate="no">@agustino_bienes.raices</span>
+        </a>
+      </div>
+    </div>
   </div>
 </header>
 
 <main id="contenido">
   <section class="carta" aria-labelledby="carta-t">
     <div class="wrap carta__grid">
-      <h2 id="carta-t" class="label carta__label reveal">Una carta breve</h2>
       <div class="carta__body reveal">
+        <h2 id="carta-t" class="label carta__label">Una carta breve</h2>
         <blockquote>
-          <p>Hace cuatro años que recorro parcelas con personas que buscan algo más que un terreno: espacio, calma, un lugar donde proyectar. Mi trabajo es explicarte lo que de verdad importa —rol, factibilidad, accesos, papeles— y acompañarte hasta la escritura.</p>
+          <p>Hace más de cuatro años que recorro parcelas con personas que buscan algo más que un terreno: espacio, calma, un lugar donde proyectar. Mi trabajo es explicarte lo que de verdad importa —rol, factibilidad, accesos, papeles— y acompañarte hasta la escritura.</p>
         </blockquote>
         <p class="firma" translate="no">— Agustino</p>
       </div>
+      <picture class="carta__foto reveal">
+        <source media="(max-width: 959px)" srcset="brand/paisaje-hero-4x5.webp" width="819" height="1024">
+        <img src="brand/paisaje-hero.webp" width="1024" height="1024" loading="lazy" decoding="async"
+             alt="Viñedo verde entre pastizales dorados, con cerros boscosos al fondo bajo un cielo despejado">
+      </picture>
     </div>
   </section>
 
   <section class="bosque" aria-labelledby="ficha-t">
-    <figure class="paisaje">
-      <img src="brand/paisaje-capas.svg" width="1024" height="330" loading="lazy" decoding="async"
-           alt="Ilustración de cerros y viñedo bajo el sol">
-    </figure>
     <div class="wrap ficha">
-      <div class="ficha__head">
-        <h2 id="ficha-t" class="label">Ficha técnica</h2>
-        <img class="ficha__logo" src="brand/agustino-logo-claro.svg" width="720" height="350" alt="" loading="lazy">
+      <div class="ficha__top">
+        <figure class="ficha__video">
+          <video data-media="(min-width: 960px)" muted loop playsinline preload="metadata"
+                 poster="brand/paisaje-loop-poster.jpg" width="624" height="624" aria-hidden="true">
+            <source src="brand/paisaje-loop.webm" type="video/webm">
+            <source src="brand/paisaje-loop.mp4" type="video/mp4">
+          </video>
+        </figure>
+        <div class="ficha__head">
+          <img class="ficha__logo" src="brand/agustino-logo-claro.svg" width="720" height="350" alt="" loading="lazy">
+          <h2 id="ficha-t" class="label">Ficha técnica</h2>
+        </div>
       </div>
       <dl class="reveal">
-        <div class="dato"><dt>4 años</dt><dd class="label">en el rubro</dd></div>
+        <div class="dato"><dt>Más de 4 años</dt><dd class="label">asesorando a familias en el rubro inmobiliario</dd></div>
         <div class="dato"><dt>Especialista</dt><dd class="label">en parcelas</dd></div>
         <div class="dato"><dt>Martillero público</dt><dd class="label">y corredor inmobiliario</dd></div>
       </dl>
@@ -269,20 +346,30 @@ h1{
       <div class="cierre__grid">
         <h2 id="cierre-t" class="reveal">¿Tienes una parcela en mente o recién empiezas a buscar?</h2>
         <div class="cierre__side reveal">
-          <a class="btn" data-wa href="https://wa.me/56957860849?text=Hola%20Agustino%2C%20vengo%20desde%20tu%20web"
+          <a class="btn" href="https://wa.me/56957860849?text=Hola%20Agustino%2C%20vengo%20desde%20tu%20web"
              target="_blank" rel="noopener" aria-label="Conversemos por WhatsApp (abre en una pestaña nueva)">
             <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
             Conversemos por WhatsApp
           </a>
-          <nav aria-label="Redes sociales" id="redes-nav">
+          <a class="ig" href="https://www.instagram.com/agustino_bienes.raices/" target="_blank" rel="noopener" aria-label="Instagram de Agustino">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-ig"/></svg>
+            <span translate="no">@agustino_bienes.raices</span>
+          </a>
+          <nav aria-label="Otras redes sociales" id="redes-nav" hidden>
             <ul class="redes label" id="redes"></ul>
           </nav>
           <p class="oficina">Asesor en Inmobiliaria Toscana · Alsacia 105, Las Condes</p>
         </div>
       </div>
 
+      <img class="cerros" src="brand/cerros-linea.svg" width="1024" height="120" alt="" loading="lazy">
       <footer class="pie">
         <p>© 2026 <span translate="no">Agustino</span></p>
+        <p>Más de 4 años asesorando a familias en el rubro inmobiliario.</p>
+        <a class="ig" href="https://www.instagram.com/agustino_bienes.raices/" target="_blank" rel="noopener" aria-label="Instagram de Agustino">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-ig"/></svg>
+          <span translate="no">@agustino_bienes.raices</span>
+        </a>
         <p>Diseño: SP Agency</p>
       </footer>
     </div>
@@ -299,28 +386,48 @@ h1{
   <symbol id="i-wa" viewBox="0 0 24 24">
     <path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.22 8.23Zm4.51-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.24-.64.8-.78.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/>
   </symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.3" cy="6.7" r=".6" fill="currentColor"/>
+    </g>
+  </symbol>
 </svg>
 
 <script>
-/* Redes: completa la URL para mostrar una red. Si está vacía, no aparece. */
+/* Otras redes: completa la URL para mostrarla en el cierre. Si está vacía, no aparece.
+   (Instagram ya está fijo en el hero, el cierre y el pie). */
 const REDES = [
-  { nombre: "Instagram", url: "https://www.instagram.com/agustino_bienes.raices/" },
-  { nombre: "TikTok",    url: "" },
-  { nombre: "Facebook",  url: "" },
-  { nombre: "LinkedIn",  url: "" }
+  { nombre: "TikTok",   url: "" },
+  { nombre: "Facebook", url: "" },
+  { nombre: "LinkedIn", url: "" }
 ];
 
 (function () {
   const ul = document.getElementById("redes");
-  if (!REDES.some(r => r.url)) document.getElementById("redes-nav").hidden = true;
-  REDES.filter(r => r.url).forEach(r => {
+  const activas = REDES.filter(r => r.url);
+  if (activas.length) document.getElementById("redes-nav").hidden = false;
+  activas.forEach(r => {
     const li = document.createElement("li");
     const a = document.createElement("a");
     a.href = r.url; a.target = "_blank"; a.rel = "noopener";
     a.textContent = r.nombre;
-    a.setAttribute("aria-label", r.nombre + " de Agustino (abre en una pestaña nueva)");
+    a.setAttribute("aria-label", r.nombre + " de Agustino");
     li.appendChild(a); ul.appendChild(li);
   });
+
+  /* Videos: solo se reproducen donde se ven y si no se pidió reducir el movimiento.
+     Con prefers-reduced-motion queda el poster. */
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const videos = [...document.querySelectorAll("video[data-media]")].map(v => ({ v, mq: window.matchMedia(v.dataset.media) }));
+  const syncVideos = () => videos.forEach(({ v, mq }) => {
+    if (mq.matches && !reduce.matches) { const p = v.play(); if (p) p.catch(() => {}); }
+    else { v.pause(); }
+  });
+  syncVideos();
+  reduce.addEventListener?.("change", syncVideos);
+  videos.forEach(({ mq }) => mq.addEventListener?.("change", syncVideos));
 
   if (!("IntersectionObserver" in window)) return;
   document.documentElement.classList.add("js");
